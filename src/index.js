@@ -1,7 +1,10 @@
 import './style.css';
-import nav from './nav.js';
+import { nav } from './nav.js';
 
-nav();
+const navLinks = ['Home', 'About', 'Contact'];
+const header = 'How Do You Do?';
+
+nav(navLinks);
 
 function component() {
   const element = document.createElement('div');
