@@ -1,18 +1,11 @@
 import './style.css';
 import { nav } from './nav.js';
+import { header } from './header.js';
 
 const navLinks = ['Home', 'About', 'Contact'];
-const header = 'How Do You Do?';
+const headerText = 'How Do You Do?';
 
 nav(navLinks);
+header(headerText);
 
-function component() {
-  const element = document.createElement('div');
-  element.textContent = 'Hello World';
-
-  return element;
-}
-
-console.log('test');
-
-document.body.appendChild(component());
+console.log('index working');
