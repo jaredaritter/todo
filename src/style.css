@@ -4,6 +4,20 @@ body {
   padding: 0;
 }
 
-div {
-  color: red;
+.nav {
+  background-color: lightskyblue;
+}
+
+.header {
+  background-color: bisque;
+}
+
+.content {
+  background-color: lightgreen;
+}
+
+.project .inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
