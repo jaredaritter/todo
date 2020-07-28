@@ -97,7 +97,7 @@
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "html,\nbody {\n  margin: 0;\n  padding: 0;\n}\n\ndiv {\n  color: red;\n}\n", ""]);
+exports.push([module.i, "html,\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n.nav {\n  background-color: lightskyblue;\n}\n\n.header {\n  background-color: bisque;\n}\n\n.content {\n  background-color: lightgreen;\n}\n\n.project .inputs {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -489,6 +489,29 @@ module.exports = function (list, options) {
 
 /***/ }),
 
+/***/ "./src/header.js":
+/*!***********************!*\
+  !*** ./src/header.js ***!
+  \***********************/
+/*! exports provided: header */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "header", function() { return header; });
+function header(text) {
+  console.log('header working');
+  const parent = document.querySelector('.header');
+  const element = document.createElement('h1');
+  element.textContent = text;
+  parent.appendChild(element);
+}
+
+
+
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -500,40 +523,151 @@ module.exports = function (list, options) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _nav_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./nav.js */ "./src/nav.js");
+/* harmony import */ var _header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header.js */ "./src/header.js");
+/* harmony import */ var _item_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./item.js */ "./src/item.js");
+// IMPORTS
 
 
 
-Object(_nav_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
 
-function component() {
-  const element = document.createElement('div');
-  element.textContent = 'Hello World';
+// BASE VARIABLES AND PAGE INFO
+const headerText = 'How Do You Do?';
+const defaultArr = [];
 
-  return element;
+// HEADER RENDER AND VERIFICATION LOG
+Object(_header_js__WEBPACK_IMPORTED_MODULE_1__["header"])(headerText);
+console.log('index working');
+
+const list = document.querySelector('.list');
+
+// TODO BUTTON REFERENCE AND EVENT LISTENER WITH CALLED FUNCTION
+document
+  .querySelector('.new-todo')
+  .addEventListener('click', newTodo);
+
+function newTodo() {
+  const form = document.querySelector('form');
+  const todo = Object(_item_js__WEBPACK_IMPORTED_MODULE_2__["item"])(
+    form.title.value,
+    form.description.value,
+    form.due.value,
+    form.priority.value,
+  );
+  // PUSH TO ARRAY FOR HOLDING INFORMATION
+  defaultArr.push(todo);
+  console.table(defaultArr);
+  // ADD ITEM TO LIST
+  const li = document.createElement('li');
+  li.textContent = todo.title;
+  list.appendChild(li);
+  // CLEAR FORM
+  clearForm(form);
 }
 
-console.log('test');
+// SET FORM VALUES TO EMPTY STRINGS IGNORING THE SUBMIT BUTTON
+function clearForm(form) {
+  for (let i = 0; i < form.length - 1; i++) {
+    form[i].value = '';
+  }
+}
 
-document.body.appendChild(component());
+// ORIGINAL TEST FUNCTION
+// function newTodo() {
+//   const blank = item(
+//     'title',
+//     'description',
+//     'due',
+//     'priority',
+//     'notes',
+//     'checklist'
+//   );
+//   // PUSH TO ARRAY FOR HOLDING INFORMATION
+//   defaultArr.push(blank);
+//   console.table(defaultArr);
+//   // ADD ITEM TO LIST
+//   const li = document.createElement('li');
+//   li.textContent = blank.title;
+//   list.appendChild(li);
+// }
+
+// PROJECT BUTTON REFERENCE AND EVENT LISTENER WITH CALLED FUNCTION
+document
+  .querySelector('.new-project')
+  .addEventListener('click', buildNewProject);
+
+function buildNewProject() {
+  const parent = document.querySelector('.content');
+  const element = document.createElement('div');
+  element.classList.add('project');
+  element.textContent = 'Dummy';
+  parent.appendChild(element);
+}
 
 
 /***/ }),
 
-/***/ "./src/nav.js":
-/*!********************!*\
-  !*** ./src/nav.js ***!
-  \********************/
-/*! exports provided: default */
+/***/ "./src/item.js":
+/*!*********************!*\
+  !*** ./src/item.js ***!
+  \*********************/
+/*! exports provided: item */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-function nav() {
-  console.log('Nav working');
-}
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "item", function() { return item; });
+// function item() {
+//   console.log('item working');
 
-/* harmony default export */ __webpack_exports__["default"] = (nav);
+//   const attributes = {
+//     title: '',
+//     description: '',
+//     dueDate: '',
+//     priority: '',
+//     notes: '',
+//     checklist: '',
+//   };
+
+//   const project = document.querySelector('.project');
+//   const list = document.querySelector('.list');
+//   const newTodo = document.querySelector('.new-todo');
+
+//   newTodo.addEventListener('click', (e) => {
+//     let element = document.createElement('li');
+//     element.textContent = prompt('What would you like to add?');
+//     list.appendChild(element);
+//   });
+// }
+
+const item = (title, description, dueDate, priority) => {
+  // const getTitle = () => title;
+  // const getDescription = () => description;
+  // const getDueDate = () => dueDate;
+  // const getPriority = () => priority;
+  // const getNotes = () => notes;
+  // const getChecklist = () => checklist;
+
+  // return {
+  //   getTitle,
+  //   getDescription,
+  //   getDueDate,
+  //   getPriority,
+  //   getNotes,
+  //   getChecklist,
+  // };
+
+  const sayHello = () => console.log('hello!');
+
+  return {
+    title,
+    description,
+    dueDate,
+    priority,
+    sayHello,
+  };
+};
+
+
 
 
 /***/ }),
