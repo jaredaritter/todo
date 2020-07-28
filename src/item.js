@@ -21,7 +21,7 @@
 //   });
 // }
 
-const item = (title, description, dueDate, priority, notes, checklist) => {
+const item = (title, description, dueDate, priority) => {
   // const getTitle = () => title;
   // const getDescription = () => description;
   // const getDueDate = () => dueDate;
@@ -45,8 +45,7 @@ const item = (title, description, dueDate, priority, notes, checklist) => {
     description,
     dueDate,
     priority,
-    notes,
-    checklist,
+    sayHello,
   };
 };
 
