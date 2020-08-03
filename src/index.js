@@ -32,9 +32,9 @@ function newTodo() {
 function renderTodo(obj) {
   const tbody = document.querySelector('tbody');
   const tr = document.createElement('tr');
-  for (const item in todo) {
+  for (const item in obj) {
     const td = document.createElement('td');
-    td.textContent = todo[item];
+    td.textContent = obj[item];
     tr.appendChild(td);
   }
   tbody.appendChild(tr);
