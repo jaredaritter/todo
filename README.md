@@ -1,6 +1,6 @@
 # To Do project from TOP
 
-- Details pending
+- Basic ToDo project. Currently WIP.
 
 ## Roadmap
 
