@@ -10,12 +10,26 @@ body {
 
 .header {
   background-color: bisque;
+  text-align: center;
 }
 
 .content {
   background-color: lightgreen;
 }
 
-table {
+h2 {
+  text-align: center;
+}
+
+table,
+td {
   border: 1px solid black;
+}
+
+table {
+  margin: auto;
+}
+
+th {
+  width: 220px;
 }
