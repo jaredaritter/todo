@@ -22,12 +22,14 @@ function newTodo() {
   // PUSH TO ARRAY FOR HOLDING INFORMATION
   defaultArr.push(todo);
   console.table(defaultArr);
-  // ADD ITEM TO LIST
-  // const li = document.createElement('li');
-  // li.textContent = todo.title;
-  // list.appendChild(li);
-  // TABLE FORMAT
+  // ADD ITEM TO TABLE
   console.log(todo);
+  renderTodo(todo);
+  // CLEAR FORM
+  clearForm(form);
+}
+
+function renderTodo(obj) {
   const tbody = document.querySelector('tbody');
   const tr = document.createElement('tr');
   for (const item in todo) {
@@ -36,8 +38,6 @@ function newTodo() {
     tr.appendChild(td);
   }
   tbody.appendChild(tr);
-  // CLEAR FORM
-  clearForm(form);
 }
 
 // SET FORM VALUES TO EMPTY STRINGS IGNORING THE SUBMIT BUTTON
