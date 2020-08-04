@@ -535,9 +535,9 @@ function newTodo() {
 function renderTodo(obj) {
   const tbody = document.querySelector('tbody');
   const tr = document.createElement('tr');
-  for (const item in todo) {
+  for (const item in obj) {
     const td = document.createElement('td');
-    td.textContent = todo[item];
+    td.textContent = obj[item];
     tr.appendChild(td);
   }
   tbody.appendChild(tr);
@@ -564,22 +564,6 @@ function clearForm(form) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "item", function() { return item; });
 const item = (title, description, dueDate, priority) => {
-  // const getTitle = () => title;
-  // const getDescription = () => description;
-  // const getDueDate = () => dueDate;
-  // const getPriority = () => priority;
-  // const getNotes = () => notes;
-  // const getChecklist = () => checklist;
-
-  // return {
-  //   getTitle,
-  //   getDescription,
-  //   getDueDate,
-  //   getPriority,
-  //   getNotes,
-  //   getChecklist,
-  // };
-
   return {
     title,
     description,
