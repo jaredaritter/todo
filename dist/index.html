@@ -11,16 +11,28 @@
         <h1>How Do You Do?</h1>
       </header>
       <div class="content">
-        <form>
-          <label for="title">Title: </label>
-          <input type="text" id="title" name="title" />
-          <label for="description">Description: </label>
-          <input type="text" id="description" name="description" />
-          <label for="due">Due: </label>
-          <input type="text" id="due" name="due" />
-          <label for="priority">Priority </label>
-          <input type="text" id="priority" name="priority" />
-          <button type="button" class="new-todo">New Todo</button>
+        <form id="project-form">
+          <label for="name">Project Details: </label>
+          <input type="text" name="name" id="name" placeholder="Name" />
+          <button type="button" class="new-project">Make It</button>
+        </form>
+        <form id="todo-form">
+          <label>Todo Details: </label>
+          <input type="text" id="title" name="title" placeholder="Title" />
+          <input
+            type="text"
+            id="description"
+            name="description"
+            placeholder="Description"
+          />
+          <input type="text" id="due" name="due" placeholder="Due Date" />
+          <input
+            type="text"
+            id="priority"
+            name="priority"
+            placeholder="Priority"
+          />
+          <button type="button" class="new-todo">Make It</button>
         </form>
         <div class="project">
           <h2>Default</h2>

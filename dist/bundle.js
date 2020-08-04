@@ -501,7 +501,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _item_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./item.js */ "./src/item.js");
+/* harmony import */ var _project_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./project.js */ "./src/project.js");
 // IMPORTS
+
 
 
 
@@ -513,9 +515,10 @@ const list = document.querySelector('.list');
 
 // TODO BUTTON REFERENCE AND EVENT LISTENER WITH CALLED FUNCTION
 document.querySelector('.new-todo').addEventListener('click', newTodo);
+document.querySelector('.new-project').addEventListener('click', newProject);
 
 function newTodo() {
-  const form = document.querySelector('form');
+  const form = document.querySelector('#todo-form');
   const todo = Object(_item_js__WEBPACK_IMPORTED_MODULE_1__["item"])(
     form.title.value,
     form.description.value,
@@ -530,6 +533,12 @@ function newTodo() {
   renderTodo(todo);
   // CLEAR FORM
   clearForm(form);
+}
+
+function newProject() {
+  const form = document.querySelector('#project-form');
+  console.log(`${form.name.value}`);
+  Object(_project_js__WEBPACK_IMPORTED_MODULE_2__["project"])(form.name.value);
 }
 
 function renderTodo(obj) {
@@ -570,6 +579,72 @@ const item = (title, description, dueDate, priority) => {
     dueDate,
     priority,
   };
+};
+
+
+
+
+/***/ }),
+
+/***/ "./src/project.js":
+/*!************************!*\
+  !*** ./src/project.js ***!
+  \************************/
+/*! exports provided: project */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "project", function() { return project; });
+// CREATE NEW PROJECT HTML AND GET NAME
+// STORE ARRAY HERE OR IN INDEX?
+
+// WHEN CALLED SHOULD TAKE NAME INPUT THEN BUILD AND RENDER NEW PROJECT WITH APPROPRIATE HEADER NAME, COLUMN TITLES, AND SINGLE DUMMY INPUT
+
+const project = (projectName) => {
+  const content = document.querySelector('.content');
+  const project = document.createElement('div');
+  project.classList.add('project');
+  const table = document.createElement('table');
+  table.classList.add('list');
+
+  table.appendChild(buildHeadElement());
+  table.appendChild(buildBodyElement());
+  project.appendChild(buildHeader());
+  project.appendChild(table);
+  content.appendChild(project);
+
+  function buildHeader() {
+    const header = document.createElement('h2');
+    header.textContent = projectName;
+    return header;
+  }
+
+  function buildHeadElement() {
+    const cellNames = ['Title', 'Description', 'Due', 'Priority'];
+    const thead = document.createElement('thead');
+    const tr = document.createElement('tr');
+    cellNames.forEach((name) => {
+      const th = document.createElement('th');
+      th.textContent = name;
+      tr.appendChild(th);
+    });
+    thead.appendChild(tr);
+    return thead;
+  }
+
+  function buildBodyElement() {
+    const cellNames = ['HTML', 'HTML', 'HTML', 'HTML'];
+    const tbody = document.createElement('tbody');
+    const tr = document.createElement('tr');
+    cellNames.forEach((name) => {
+      const td = document.createElement('td');
+      td.textContent = name;
+      tr.appendChild(td);
+    });
+    tbody.appendChild(tr);
+    return tbody;
+  }
 };
 
 

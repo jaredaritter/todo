@@ -1,6 +1,7 @@
 // IMPORTS
 import './style.css';
 import { item } from './item.js';
+import { project } from './project.js';
 
 // BASE VARIABLES
 const defaultArr = [];
@@ -10,9 +11,10 @@ const list = document.querySelector('.list');
 
 // TODO BUTTON REFERENCE AND EVENT LISTENER WITH CALLED FUNCTION
 document.querySelector('.new-todo').addEventListener('click', newTodo);
+document.querySelector('.new-project').addEventListener('click', newProject);
 
 function newTodo() {
-  const form = document.querySelector('form');
+  const form = document.querySelector('#todo-form');
   const todo = item(
     form.title.value,
     form.description.value,
@@ -27,6 +29,12 @@ function newTodo() {
   renderTodo(todo);
   // CLEAR FORM
   clearForm(form);
+}
+
+function newProject() {
+  const form = document.querySelector('#project-form');
+  console.log(`${form.name.value}`);
+  project(form.name.value);
 }
 
 function renderTodo(obj) {
