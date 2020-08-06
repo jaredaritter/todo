@@ -12,6 +12,10 @@ const defaultArr = [];
 document.querySelector('.new-todo').addEventListener('click', newTodo);
 document.querySelector('.new-project').addEventListener('click', newProject);
 
+// INITIALIZE PAGE
+  project('Default');
+
+// FUNCTIONS
 function newTodo() {
   const form = document.querySelector('#todo-form');
   const todo = item(
@@ -30,13 +34,6 @@ function newTodo() {
   // clearForm(form);
 }
 
-function newProject(event) {
-  const form = document.querySelector('#project-form');
-  console.log(`${form.name.value}`);
-  project(form.name.value);
-  // clearForm(form);
-}
-
 function renderTodo(obj) {
   const tbody = document.querySelector('tbody');
   const tr = document.createElement('tr');
@@ -46,6 +43,13 @@ function renderTodo(obj) {
     tr.appendChild(td);
   }
   tbody.appendChild(tr);
+}
+
+function newProject() {
+  const form = document.querySelector('#project-form');
+  console.log(`${form.name.value}`);
+  project(form.name.value);
+  // clearForm(form);
 }
 
 // SET FORM VALUES TO EMPTY STRINGS IGNORING THE SUBMIT BUTTON
