@@ -28,4 +28,5 @@
   - project
   - todo
 
-- buildDefault
+- Make default project in javascript
+  - buildDefault
