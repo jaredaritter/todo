@@ -532,13 +532,14 @@ function newTodo() {
   console.log(todo);
   renderTodo(todo);
   // CLEAR FORM
-  clearForm(form);
+  // clearForm(form);
 }
 
-function newProject() {
+function newProject(event) {
   const form = document.querySelector('#project-form');
   console.log(`${form.name.value}`);
   Object(_project_js__WEBPACK_IMPORTED_MODULE_2__["project"])(form.name.value);
+  // clearForm(form);
 }
 
 function renderTodo(obj) {
