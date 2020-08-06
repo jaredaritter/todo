@@ -28,13 +28,14 @@ function newTodo() {
   console.log(todo);
   renderTodo(todo);
   // CLEAR FORM
-  clearForm(form);
+  // clearForm(form);
 }
 
-function newProject() {
+function newProject(event) {
   const form = document.querySelector('#project-form');
   console.log(`${form.name.value}`);
   project(form.name.value);
+  // clearForm(form);
 }
 
 function renderTodo(obj) {
