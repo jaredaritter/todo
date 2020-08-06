@@ -97,7 +97,7 @@
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "html,\nbody {\n  margin: 0;\n  padding: 0;\n}\n\n.nav {\n  background-color: lightskyblue;\n}\n\n.header {\n  background-color: bisque;\n  text-align: center;\n}\n\n.content {\n  background-color: lightgreen;\n}\n\nh2 {\n  text-align: center;\n}\n\ntable,\ntd {\n  border: 1px solid black;\n}\n\ntable {\n  margin: auto;\n}\n\nth {\n  width: 220px;\n}\n", ""]);
+exports.push([module.i, "html,\nbody {\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  background-color: hsl(0, 0%, 80%);\n}\n\n.nav {\n  background-color: lightskyblue;\n}\n\n.header {\n  background-color: bisque;\n  text-align: center;\n}\n\n.content {\n  background-color: lightgreen;\n}\n\nh2 {\n  text-align: center;\n}\n\ntable,\ntd {\n  border: 1px solid black;\n}\n\ntable {\n  margin: auto;\n}\n\nth {\n  width: 220px;\n}\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -511,7 +511,6 @@ __webpack_require__.r(__webpack_exports__);
 const defaultArr = [];
 
 // GENERAL REFERENCES
-const list = document.querySelector('.list');
 
 // TODO BUTTON REFERENCE AND EVENT LISTENER WITH CALLED FUNCTION
 document.querySelector('.new-todo').addEventListener('click', newTodo);
