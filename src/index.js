@@ -7,7 +7,6 @@ import { project } from './project.js';
 const defaultArr = [];
 
 // GENERAL REFERENCES
-const list = document.querySelector('.list');
 
 // TODO BUTTON REFERENCE AND EVENT LISTENER WITH CALLED FUNCTION
 document.querySelector('.new-todo').addEventListener('click', newTodo);
