@@ -516,6 +516,10 @@ const defaultArr = [];
 document.querySelector('.new-todo').addEventListener('click', newTodo);
 document.querySelector('.new-project').addEventListener('click', newProject);
 
+// INITIALIZE PAGE
+  Object(_project_js__WEBPACK_IMPORTED_MODULE_2__["project"])('Default');
+
+// FUNCTIONS
 function newTodo() {
   const form = document.querySelector('#todo-form');
   const todo = Object(_item_js__WEBPACK_IMPORTED_MODULE_1__["item"])(
@@ -534,13 +538,6 @@ function newTodo() {
   // clearForm(form);
 }
 
-function newProject(event) {
-  const form = document.querySelector('#project-form');
-  console.log(`${form.name.value}`);
-  Object(_project_js__WEBPACK_IMPORTED_MODULE_2__["project"])(form.name.value);
-  // clearForm(form);
-}
-
 function renderTodo(obj) {
   const tbody = document.querySelector('tbody');
   const tr = document.createElement('tr');
@@ -550,6 +547,13 @@ function renderTodo(obj) {
     tr.appendChild(td);
   }
   tbody.appendChild(tr);
+}
+
+function newProject() {
+  const form = document.querySelector('#project-form');
+  console.log(`${form.name.value}`);
+  Object(_project_js__WEBPACK_IMPORTED_MODULE_2__["project"])(form.name.value);
+  // clearForm(form);
 }
 
 // SET FORM VALUES TO EMPTY STRINGS IGNORING THE SUBMIT BUTTON
