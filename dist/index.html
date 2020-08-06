@@ -25,36 +25,14 @@
             name="description"
             placeholder="Description"
           />
-          <input type="text" id="due" name="due" placeholder="Due Date" />
-          <input
-            type="text"
-            id="priority"
-            name="priority"
-            placeholder="Priority"
-          />
+          <input type="date" id="due" name="due" placeholder="Due Date" />
+          <select name="priority" id="priority">
+            <option value="minimal">Minimal</option>
+            <option value="normal" selected>Normal</option>
+            <option value="urgent">Urgent</option>
+          </select>
           <button type="button" class="new-todo">Make It</button>
         </form>
-        <div class="project">
-          <h2>Default</h2>
-          <table class="list">
-            <thead>
-              <tr>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Due</th>
-                <th>Priority</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>HTML</td>
-                <td>HTML</td>
-                <td>HTML</td>
-                <td>HTML</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
       </div>
     </div>
     <script src="bundle.js"></script>
