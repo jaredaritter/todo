@@ -58,5 +58,3 @@ function clearForm(form) {
     form[i].value = '';
   }
 }
-
-// small change
