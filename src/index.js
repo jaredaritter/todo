@@ -13,7 +13,7 @@ document.querySelector('.new-todo').addEventListener('click', newTodo);
 document.querySelector('.new-project').addEventListener('click', newProject);
 
 // INITIALIZE PAGE
-  project('Default');
+project('Default');
 
 // FUNCTIONS
 function newTodo() {
@@ -58,3 +58,5 @@ function clearForm(form) {
     form[i].value = '';
   }
 }
+
+// small change
