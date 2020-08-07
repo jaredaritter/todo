@@ -507,6 +507,39 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+// STRUCTURE FOR LOCALSTORAGE?
+// [
+//   {
+//     name: 'something',
+//     todos: [
+//       {
+//         item1: 'details',
+//         item2: 'details',
+//         item3: 'details'
+//       },
+//       {...},
+//       {...}
+//     ]
+//   },
+//   {next project}
+// ]
+
+// RESTRUCTURE TO USE OBJECT FORMAT FOR PROPER STORAGE INTO LOCAL STORAGE
+const projects = [
+  {
+    name: 'Default',
+    todos: [
+      {
+        title: 'test',
+        description: 'test',
+        due: 'test',
+        priority: 'normal',
+      },
+    ],
+  },
+];
+console.log(projects[0].todos[0].priority);
+
 // BASE VARIABLES
 const defaultArr = [];
 
@@ -517,7 +550,7 @@ document.querySelector('.new-todo').addEventListener('click', newTodo);
 document.querySelector('.new-project').addEventListener('click', newProject);
 
 // INITIALIZE PAGE
-  Object(_project_js__WEBPACK_IMPORTED_MODULE_2__["project"])('Default');
+Object(_project_js__WEBPACK_IMPORTED_MODULE_2__["project"])('Default');
 
 // FUNCTIONS
 function newTodo() {

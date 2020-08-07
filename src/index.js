@@ -3,6 +3,39 @@ import './style.css';
 import { item } from './item.js';
 import { project } from './project.js';
 
+// STRUCTURE FOR LOCALSTORAGE?
+// [
+//   {
+//     name: 'something',
+//     todos: [
+//       {
+//         item1: 'details',
+//         item2: 'details',
+//         item3: 'details'
+//       },
+//       {...},
+//       {...}
+//     ]
+//   },
+//   {next project}
+// ]
+
+// RESTRUCTURE TO USE OBJECT FORMAT FOR PROPER STORAGE INTO LOCAL STORAGE
+const projects = [
+  {
+    name: 'Default',
+    todos: [
+      {
+        title: 'test',
+        description: 'test',
+        due: 'test',
+        priority: 'normal',
+      },
+    ],
+  },
+];
+console.log(projects[0].todos[0].priority);
+
 // BASE VARIABLES
 const defaultArr = [];
 
