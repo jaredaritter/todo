@@ -2,7 +2,18 @@
 import './styles/style.css';
 import { project } from './project';
 import { newTodo } from './newTodo';
+import { newProject } from './newProject';
 
+// TODO BUTTON REFERENCE AND EVENT LISTENER WITH CALLED FUNCTION
+document.querySelector('.new-todo').addEventListener('click', newTodo);
+document.querySelector('.new-project').addEventListener('click', newProject);
+
+// INITIALIZE PAGE
+project('Default');
+
+// -----------------------------------------------------------------------------
+// BRAINSTORMING AND PLANNING
+// ----------------------------------------------------------------------------
 // STRUCTURE FOR LOCALSTORAGE?
 // [
 //   {
@@ -35,17 +46,3 @@ const projects = [
   },
 ];
 console.log(projects[0].todos[0].priority);
-
-// TODO BUTTON REFERENCE AND EVENT LISTENER WITH CALLED FUNCTION
-document.querySelector('.new-todo').addEventListener('click', newTodo);
-document.querySelector('.new-project').addEventListener('click', newProject);
-
-// INITIALIZE PAGE
-project('Default');
-
-function newProject() {
-  const form = document.querySelector('#project-form');
-  console.log(`${form.name.value}`);
-  project(form.name.value);
-  // clearForm(form);
-}
