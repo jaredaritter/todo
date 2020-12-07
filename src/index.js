@@ -1,5 +1,5 @@
 // IMPORTS
-import './style.css';
+import './styles/style.css';
 import { project } from './project';
 import { newTodo } from './newTodo';
 
