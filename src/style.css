@@ -5,33 +5,49 @@ body {
 }
 
 body {
-  background-color: hsl(0, 0%, 80%);
+  background-color: hsl(0, 0%, 100%);
 }
 
 h2 {
   text-align: center;
 }
 
-table,
-td {
-  border: 1px solid black;
+table {
+  border: 1px solid hsl(140, 100%, 25%);
+  border-radius: 3px;
+  text-align: center;
 }
 
 table {
   margin: auto;
 }
 
+td {
+  text-align: center;
+}
+
 th {
   width: 220px;
 }
 
+.container {
+  width: 900px;
+  margin: auto;
+  color: hsl(0, 0%, 5%);
+}
+
 .content {
-  background-color: lightgreen;
+  background-color: hsl(140, 100%, 95%);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px 1px lightgrey;
 }
 
 .header {
   background-color: bisque;
   text-align: center;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px 1px lightgrey;
 }
 
 .hide {
@@ -40,4 +56,9 @@ th {
 
 .nav {
   background-color: lightskyblue;
+}
+
+#todo-form {
+  width: 90%;
+  margin: auto;
 }
