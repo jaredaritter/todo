@@ -4,6 +4,7 @@
 
 ## Roadmap
 
+- Break apart project.js into component pieces (think about how it will work for building multiple new projects)
 - Flesh out todo items for default project
 - Create ability to make new projects
   - todos are linked to project
