@@ -8,19 +8,6 @@ body {
   background-color: hsl(0, 0%, 80%);
 }
 
-.nav {
-  background-color: lightskyblue;
-}
-
-.header {
-  background-color: bisque;
-  text-align: center;
-}
-
-.content {
-  background-color: lightgreen;
-}
-
 h2 {
   text-align: center;
 }
@@ -36,4 +23,21 @@ table {
 
 th {
   width: 220px;
+}
+
+.content {
+  background-color: lightgreen;
+}
+
+.header {
+  background-color: bisque;
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+.nav {
+  background-color: lightskyblue;
 }
