@@ -48,7 +48,7 @@ document.querySelector('.new-project').addEventListener('click', newProject);
 // INITIALIZE PAGE
 project('Default');
 
-// FUNCTIONS
+// EVENT LISTENER FUNCTIONS
 function newTodo() {
   const form = document.querySelector('#todo-form');
   const todo = item(
@@ -67,6 +67,14 @@ function newTodo() {
   // clearForm(form);
 }
 
+function newProject() {
+  const form = document.querySelector('#project-form');
+  console.log(`${form.name.value}`);
+  project(form.name.value);
+  // clearForm(form);
+}
+
+// RENDER FUNCTIONS
 function renderTodo(obj) {
   const tbody = document.querySelector('tbody');
   const tr = document.createElement('tr');
@@ -78,13 +86,7 @@ function renderTodo(obj) {
   tbody.appendChild(tr);
 }
 
-function newProject() {
-  const form = document.querySelector('#project-form');
-  console.log(`${form.name.value}`);
-  project(form.name.value);
-  // clearForm(form);
-}
-
+// HELPER FUNCTIONS
 // SET FORM VALUES TO EMPTY STRINGS IGNORING THE SUBMIT BUTTON
 function clearForm(form) {
   for (let i = 0; i < form.length - 1; i++) {
