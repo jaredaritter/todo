@@ -11,28 +11,31 @@
         <h1>How Do You Do?</h1>
       </header>
       <div class="content">
-        <form id="project-form" class="hide" onSubmit="return false;">
-          <label for="name">Project Details: </label>
-          <input type="text" name="name" id="name" placeholder="Name" />
-          <button type="button" class="new-project">Make It</button>
-        </form>
-        <form id="todo-form">
-          <label>Todo Details: </label>
-          <input type="text" id="title" name="title" placeholder="Title" />
-          <input
-            type="text"
-            id="description"
-            name="description"
-            placeholder="Description"
-          />
-          <input type="date" id="due" name="due" placeholder="Due Date" />
-          <select name="priority" id="priority">
-            <option value="minimal">Minimal</option>
-            <option value="normal" selected>Normal</option>
-            <option value="urgent">Urgent</option>
-          </select>
-          <button type="button" class="new-todo">Make It</button>
-        </form>
+        <div class="forms">
+          <form id="project-form" class="hide" onSubmit="return false;">
+            <label for="name">Project Details: </label>
+            <input type="text" name="name" id="name" placeholder="Name" />
+            <button type="button" class="new-project">Make It</button>
+          </form>
+          <form id="todo-form">
+            <label>Todo Details: </label>
+            <input type="text" id="title" name="title" placeholder="Title" />
+            <input
+              type="text"
+              id="description"
+              name="description"
+              placeholder="Description"
+            />
+            <input type="date" id="due" name="due" placeholder="Due Date" />
+            <select name="priority" id="priority">
+              <option value="minimal">Minimal</option>
+              <option value="normal" selected>Normal</option>
+              <option value="urgent">Urgent</option>
+            </select>
+            <button type="button" class="new-todo">Make It</button>
+          </form>
+        </div>
+        <div class="projects"></div>
       </div>
     </div>
     <script src="bundle.js"></script>
