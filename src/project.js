@@ -4,7 +4,7 @@
 // WHEN CALLED SHOULD TAKE NAME INPUT THEN BUILD AND RENDER NEW PROJECT WITH APPROPRIATE HEADER NAME, COLUMN TITLES, AND SINGLE DUMMY INPUT
 
 const project = (projectName) => {
-  const content = document.querySelector('.content');
+  const projects = document.querySelector('.projects');
   const project = document.createElement('div');
   project.classList.add('project');
   const table = document.createElement('table');
@@ -14,7 +14,7 @@ const project = (projectName) => {
   table.appendChild(buildBodyElement());
   project.appendChild(buildHeader());
   project.appendChild(table);
-  content.appendChild(project);
+  projects.appendChild(project);
 
   function buildHeader() {
     const header = document.createElement('h2');
@@ -35,8 +35,9 @@ const project = (projectName) => {
     return thead;
   }
 
+  // WILL REMOVE FROM FUNCTION EVENTUALLY, NOT NEEDED FOR BUILDING NEW PROJECT ASIDE FROM TESTING.
   function buildBodyElement() {
-    const cellNames = ['HTML', 'HTML', 'HTML', 'HTML'];
+    const cellNames = ['DUMMY', 'DUMMY', 'DUMMY', 'DUMMY'];
     const tbody = document.createElement('tbody');
     const tr = document.createElement('tr');
     cellNames.forEach((name) => {
