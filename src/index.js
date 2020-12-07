@@ -1,7 +1,7 @@
 // IMPORTS
 import './style.css';
-import { item } from './item.js';
-import { project } from './project.js';
+import { project } from './project';
+import { newTodo } from './newTodo';
 
 // STRUCTURE FOR LOCALSTORAGE?
 // [
@@ -46,41 +46,11 @@ document.querySelector('.new-project').addEventListener('click', newProject);
 // INITIALIZE PAGE
 project('Default');
 
-// EVENT LISTENER FUNCTIONS
-function newTodo() {
-  const form = document.querySelector('#todo-form');
-  const todo = item(
-    form.title.value,
-    form.description.value,
-    form.due.value,
-    form.priority.value
-  );
-  // PUSH TO ARRAY FOR HOLDING INFORMATION
-  defaultArr.push(todo);
-  console.table(defaultArr);
-  // ADD ITEM TO TABLE
-  renderTodo(todo);
-  // CLEAR FORM
-  clearForm(form);
-}
-
 function newProject() {
   const form = document.querySelector('#project-form');
   console.log(`${form.name.value}`);
   project(form.name.value);
   // clearForm(form);
-}
-
-// RENDER FUNCTIONS
-function renderTodo(obj) {
-  const tbody = document.querySelector('tbody');
-  const tr = document.createElement('tr');
-  for (const item in obj) {
-    const td = document.createElement('td');
-    td.textContent = obj[item];
-    tr.appendChild(td);
-  }
-  tbody.appendChild(tr);
 }
 
 // HELPER FUNCTIONS
