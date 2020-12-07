@@ -1,6 +1,6 @@
-import { item } from './components/item';
-import { renderTodo } from './renders/renderTodo';
-import { clearForm } from './helpers/clearForm';
+import { item } from '../components/item';
+import { renderTodo } from '../renders/renderTodo';
+import { clearForm } from '../helpers/clearForm';
 
 // BASE VARIABLES
 const defaultArr = [];

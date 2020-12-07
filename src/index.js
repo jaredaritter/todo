@@ -1,8 +1,8 @@
 // IMPORTS
 import './styles/style.css';
 import { project } from './project';
-import { newTodo } from './newTodo';
-import { newProject } from './newProject';
+import { newTodo } from './events/newTodo';
+import { newProject } from './events/newProject';
 
 // TODO BUTTON REFERENCE AND EVENT LISTENER WITH CALLED FUNCTION
 document.querySelector('.new-todo').addEventListener('click', newTodo);
