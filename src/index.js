@@ -39,8 +39,6 @@ console.log(projects[0].todos[0].priority);
 // BASE VARIABLES
 const defaultArr = [];
 
-// GENERAL REFERENCES
-
 // TODO BUTTON REFERENCE AND EVENT LISTENER WITH CALLED FUNCTION
 document.querySelector('.new-todo').addEventListener('click', newTodo);
 document.querySelector('.new-project').addEventListener('click', newProject);
@@ -61,10 +59,9 @@ function newTodo() {
   defaultArr.push(todo);
   console.table(defaultArr);
   // ADD ITEM TO TABLE
-  console.log(todo);
   renderTodo(todo);
   // CLEAR FORM
-  // clearForm(form);
+  clearForm(form);
 }
 
 function newProject() {
@@ -91,5 +88,8 @@ function renderTodo(obj) {
 function clearForm(form) {
   for (let i = 0; i < form.length - 1; i++) {
     form[i].value = '';
+  }
+  if (form.priority) {
+    form.priority.value = 'normal';
   }
 }
