@@ -1,4 +1,9 @@
-import { item } from './item';
+import { item } from './components/item';
+import { renderTodo } from './renders/renderTodo';
+import { clearForm } from './helpers/clearForm';
+
+// BASE VARIABLES
+const defaultArr = [];
 
 function newTodo() {
   const form = document.querySelector('#todo-form');
@@ -18,15 +23,5 @@ function newTodo() {
 }
 
 // RENDER FUNCTIONS
-function renderTodo(obj) {
-  const tbody = document.querySelector('tbody');
-  const tr = document.createElement('tr');
-  for (const item in obj) {
-    const td = document.createElement('td');
-    td.textContent = obj[item];
-    tr.appendChild(td);
-  }
-  tbody.appendChild(tr);
-}
 
 export { newTodo };
