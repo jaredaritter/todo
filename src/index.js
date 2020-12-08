@@ -8,7 +8,7 @@ document.querySelector('.new-todo').addEventListener('click', newTodo);
 document.querySelector('.new-project').addEventListener('click', newProject);
 
 // INITIALIZE PAGE
-newProject('Default');
+newProject(null, 'Default');
 
 // -----------------------------------------------------------------------------
 // BRAINSTORMING AND PLANNING

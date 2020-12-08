@@ -1,14 +1,16 @@
 import { renderProject } from '../renders/renderProject';
 import { project } from '../components/project';
 
-function newProject(projectName) {
+function newProject(e, firstProject) {
+  const form = document.querySelector('#project-form');
+  const formName = form.name.value;
+  console.log(form.name.value);
+
   const defaultName = 'Untitled';
-  const name = projectName || defaultName;
+  const name = formName || firstProject || defaultName;
   const newProject = project(name);
   renderProject(newProject.name);
-  // const form = document.querySelector('#project-form');
-  // console.log(`${form.name.value}`);
-  // project(form.name.value);
+
   // clearForm(form);
 }
 
