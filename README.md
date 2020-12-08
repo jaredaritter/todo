@@ -4,20 +4,23 @@
 
 ## Roadmap/Todo
 
-- Allow selecting which project to add todo to.
+- Add new selector option on creation of new project.
 
-* Having an area to manage state will be useful for organizing data.
+- Having an area to manage state will be useful for organizing data.
 
   - Have a fake DB file?
 
-* Store state in localstorage as well for reuse
+- Store state in localstorage as well for reuse
 
-* Break apart project.js into component pieces (think about how it will work for building multiple new projects) (COMPLETED)
-* Flesh out todo items for default project (COMPLETED)
-* Enable new project form and allow creation of multiple projects (COMPLETED)
+- Break apart project.js into component pieces (think about how it will work for building multiple new projects) (COMPLETED)
+- Flesh out todo items for default project (COMPLETED)
+- Enable new project form and allow creation of multiple projects (COMPLETED)
+
   - Enable form (COMPLETED)
   - Will need to address buildTableBody code for better solution (COMPLETED)
   - clearForm having side effect on todos. Take a look. (COMPLETED. ACTUALLY CAUSED BY HOW BUILDTABLEBODY IS BUILT AND USED ONLY THE DEFAULT PROJECT)
+
+- Allow selecting which project to add todo to. (COMPLETED)
 
 ## Design Choices
 
