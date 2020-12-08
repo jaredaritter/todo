@@ -8,7 +8,7 @@
 
   - Enable form (COMPLETED)
   - Will need to address buildTableBody code for better solution (COMPLETED)
-  - clearForm having side effect on todos. Take a look.
+  - clearForm having side effect on todos. Take a look. (COMPLETED. ACTUALLY CAUSED BY HOW BUILDTABLEBODY IS BUILT AND USED ONLY THE DEFAULT PROJECT)
   - Having an area to manage state will be useful for organizing data.
     - Have a fake DB file?
 
