@@ -6,6 +6,9 @@ function clearForm(form) {
   if (form.priority) {
     form.priority.value = 'normal';
   }
+  if (form.project) {
+    form.project.value = 'Default';
+  }
 }
 
 export { clearForm };

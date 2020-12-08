@@ -11,7 +11,8 @@ function newTodo() {
     form.title.value,
     form.description.value,
     form.due.value,
-    form.priority.value
+    form.priority.value,
+    form.project.value
   );
   // PUSH TO ARRAY FOR HOLDING INFORMATION
   defaultArr.push(todo);
