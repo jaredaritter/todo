@@ -8,12 +8,14 @@ function renderProject(projectName) {
   project.classList.add('project');
   const table = document.createElement('table');
   table.classList.add('list');
+  const tbody = document.createElement('tbody');
 
   table.appendChild(buildTableHeaders());
-  table.appendChild(buildTableBody());
+  table.appendChild(tbody);
   project.appendChild(buildProjectHeader(projectName));
   project.appendChild(table);
   projects.appendChild(project);
+  buildTableBody(); // CAN BE REMOVED AT ANY TIME WE DON'T NEED DUMMY DATA ANY MORE
 }
 
 export { renderProject };
