@@ -6,8 +6,9 @@
 
 - Enable new project form and allow creation of multiple projects
 
-  - Enable form
-  - Will need to address buildTableBody code for better solution
+  - Enable form (COMPLETED)
+  - Will need to address buildTableBody code for better solution (COMPLETED)
+  - clearForm having side effect on todos. Take a look.
   - Having an area to manage state will be useful for organizing data.
     - Have a fake DB file?
 
