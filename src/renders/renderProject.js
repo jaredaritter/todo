@@ -6,6 +6,7 @@ function renderProject(projectName) {
   const projects = document.querySelector('.projects');
   const project = document.createElement('div');
   project.classList.add('project');
+  project.setAttribute('id', `${projectName}`);
   const table = document.createElement('table');
   table.classList.add('list');
   const tbody = document.createElement('tbody');
