@@ -1,5 +1,6 @@
 import { renderProject } from '../renders/renderProject';
 import { project } from '../components/project';
+import { clearForm } from '../helpers/clearForm';
 
 function newProject(e, firstProject) {
   const form = document.querySelector('#project-form');
@@ -11,7 +12,7 @@ function newProject(e, firstProject) {
   const newProject = project(name);
   renderProject(newProject.name);
 
-  // clearForm(form);
+  clearForm(form);
 }
 
 export { newProject };

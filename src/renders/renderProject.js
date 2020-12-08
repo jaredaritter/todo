@@ -15,7 +15,7 @@ function renderProject(projectName) {
   project.appendChild(buildProjectHeader(projectName));
   project.appendChild(table);
   projects.appendChild(project);
-  buildTableBody(); // CAN BE REMOVED AT ANY TIME WE DON'T NEED DUMMY DATA ANY MORE
+  // buildTableBody(); // CAN BE REMOVED AT ANY TIME WE DON'T NEED DUMMY DATA ANY MORE
 }
 
 export { renderProject };
