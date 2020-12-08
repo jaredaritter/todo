@@ -4,10 +4,16 @@
 
 ## Roadmap
 
-- Break apart project.js into component pieces (think about how it will work for building multiple new projects)
-- Flesh out todo items for default project
-- Create ability to make new projects
-  - todos are linked to project
+- Enable new project form and allow creation of multiple projects
+
+  - Enable form
+  - Will need to address buildTableBody code for better solution
+  - Having an area to manage state will be useful for organizing data.
+    - Have a fake DB file?
+
+- Store state in localstorage as well for reuse
+- Break apart project.js into component pieces (think about how it will work for building multiple new projects) (COMPLETED)
+- Flesh out todo items for default project (COMPLETED)
 
 ## Planning
 
