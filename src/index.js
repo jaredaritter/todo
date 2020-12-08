@@ -1,6 +1,5 @@
 // IMPORTS
 import './styles/style.css';
-import { project } from './project';
 import { newTodo } from './events/newTodo';
 import { newProject } from './events/newProject';
 
@@ -9,7 +8,7 @@ document.querySelector('.new-todo').addEventListener('click', newTodo);
 document.querySelector('.new-project').addEventListener('click', newProject);
 
 // INITIALIZE PAGE
-project('Default');
+newProject('Default');
 
 // -----------------------------------------------------------------------------
 // BRAINSTORMING AND PLANNING
