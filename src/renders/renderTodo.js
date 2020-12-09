@@ -1,5 +1,6 @@
 function renderTodo(obj) {
   const tbody = document.querySelector(`#${obj.project} tbody`);
+  console.log(tbody);
   const tr = document.createElement('tr');
   for (const item in obj) {
     const td = document.createElement('td');
