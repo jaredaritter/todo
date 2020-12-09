@@ -4,7 +4,9 @@
 
 ## Roadmap/Todo
 
-- Add new selector option on creation of new project.
+- Project names with a space cannot be used with querySelector without modification.
+  - convert to kebab case for attributes?
+- Change project names to lowercase for use as attributes?
 
 - Having an area to manage state will be useful for organizing data.
 
@@ -21,6 +23,7 @@
   - clearForm having side effect on todos. Take a look. (COMPLETED. ACTUALLY CAUSED BY HOW BUILDTABLEBODY IS BUILT AND USED ONLY THE DEFAULT PROJECT)
 
 - Allow selecting which project to add todo to. (COMPLETED)
+- Add new selector option on creation of new project. (COMPLETED)
 
 ## Design Choices
 
