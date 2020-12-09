@@ -31,17 +31,17 @@ newProject(null, 'Default');
 // ]
 
 // RESTRUCTURE TO USE OBJECT FORMAT FOR PROPER STORAGE INTO LOCAL STORAGE
-const projects = [
-  {
-    name: 'Default',
-    todos: [
-      {
-        title: 'test',
-        description: 'test',
-        due: 'test',
-        priority: 'normal',
-      },
-    ],
-  },
-];
+// const projects = [
+//   {
+//     name: 'Default',
+//     todos: [
+//       {
+//         title: 'test',
+//         description: 'test',
+//         due: 'test',
+//         priority: 'normal',
+//       },
+//     ],
+//   },
+// ];
 // console.log(projects[0].todos[0].priority);
