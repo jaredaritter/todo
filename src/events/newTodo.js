@@ -17,12 +17,8 @@ function newTodo() {
   // PUSH TO ARRAY FOR HOLDING INFORMATION
   defaultArr.push(todo);
   console.table(defaultArr);
-  // ADD ITEM TO TABLE
   renderTodo(todo);
-  // CLEAR FORM
   clearForm(form);
 }
-
-// RENDER FUNCTIONS
 
 export { newTodo };

@@ -11,6 +11,7 @@
 
 ### Minor
 
+- All todos currently stored in default array in newTodo
 - Store state in localstorage as well for reuse
 - Change font
 - Adjust spacing and arrangement of forms
