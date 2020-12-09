@@ -14,6 +14,15 @@
 
 - Store state in localstorage as well for reuse
 
+- Test
+  - test 2
+- Test 3
+  - test 4
+- Test 5
+  test 6
+
+### Finished
+
 - Break apart project.js into component pieces (think about how it will work for building multiple new projects) (COMPLETED)
 - Flesh out todo items for default project (COMPLETED)
 - Enable new project form and allow creation of multiple projects (COMPLETED)
