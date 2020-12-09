@@ -6,9 +6,6 @@
 
 ### Major
 
-- Project names with a space cannot be used with querySelector without modification. Will need to address for core functionality
-  - convert to kebab case for attributes?
-- Change project names to lowercase for use as attributes?
 - Having an area to manage state will be useful for organizing data.
   - Have a fake DB file?
 
@@ -29,6 +26,9 @@
   - clearForm having side effect on todos. Take a look. (COMPLETED. ACTUALLY CAUSED BY HOW BUILDTABLEBODY IS BUILT AND USED ONLY THE DEFAULT PROJECT)
 - Allow selecting which project to add todo to. (COMPLETED)
 - Add new selector option on creation of new project. (COMPLETED)
+- Project names with a space cannot be used with querySelector without modification. Will need to address for core functionality (COMPLETED)
+  - convert to kebab case for attributes? (COMPLETED)
+- Change project names to lowercase for use as attributes? (COMPLETED)
 
 ## Design Choices
 

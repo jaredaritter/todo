@@ -7,7 +7,7 @@ function clearForm(form) {
     form.priority.value = 'normal';
   }
   if (form.project) {
-    form.project.value = 'Default';
+    form.project.value = 'default';
   }
 }
 

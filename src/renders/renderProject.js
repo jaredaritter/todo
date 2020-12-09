@@ -1,12 +1,13 @@
 import { buildProjectHeader } from './helpers/buildProjectHeader';
 import { buildTableHeaders } from './helpers/buildTableHeaders';
 import { buildTableBody } from './helpers/buildTableBody';
+import { toKebabCase } from '../helpers/toKebabCase';
 
 function renderProject(projectName) {
   const projects = document.querySelector('.projects');
   const project = document.createElement('div');
   project.classList.add('project');
-  project.setAttribute('id', `${projectName}`);
+  project.setAttribute('id', `${toKebabCase(projectName.toLowerCase())}`);
   const table = document.createElement('table');
   table.classList.add('list');
   const tbody = document.createElement('tbody');
