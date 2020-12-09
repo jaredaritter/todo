@@ -44,4 +44,4 @@ const projects = [
     ],
   },
 ];
-console.log(projects[0].todos[0].priority);
+// console.log(projects[0].todos[0].priority);
