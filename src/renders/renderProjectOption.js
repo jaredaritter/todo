@@ -1,3 +1,5 @@
+import { toKebabCase } from '../helpers/toKebabCase';
+
 function renderProjectOption(projectName) {
   if (projectName === 'Default') {
     return;
@@ -5,7 +7,7 @@ function renderProjectOption(projectName) {
   const select = document.querySelector('#project');
   const option = document.createElement('option');
 
-  option.value = projectName;
+  option.value = toKebabCase(projectName.toLowerCase());
   option.textContent = projectName;
   select.appendChild(option);
 }
