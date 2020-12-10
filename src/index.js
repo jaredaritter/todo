@@ -2,13 +2,19 @@
 import './styles/style.css';
 import { newTodo } from './events/newTodo';
 import { newProject } from './events/newProject';
+import { projects } from './data/projects';
+import { renderProject } from './renders/renderProject';
+import { renderProjectOption } from './renders/renderProjectOption';
+
+const starter = projects[0].name;
 
 // TODO BUTTON REFERENCE AND EVENT LISTENER WITH CALLED FUNCTION
 document.querySelector('.new-todo').addEventListener('click', newTodo);
 document.querySelector('.new-project').addEventListener('click', newProject);
 
 // INITIALIZE PAGE
-newProject(null, 'Default');
+renderProjectOption(starter);
+renderProject(starter);
 
 // -----------------------------------------------------------------------------
 // BRAINSTORMING AND PLANNING

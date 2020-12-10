@@ -2,11 +2,7 @@ const projects = [
   {
     name: 'Default',
     todos: [],
-  },
-  {
-    name: 'Project',
-    todos: [],
-  },
+  }
 ];
 
 export { projects };
