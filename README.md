@@ -6,12 +6,10 @@
 
 ### Major
 
-- Having an area to manage state will be useful for organizing data.
-  - Have a fake DB file?
+- Time for another planning session needed for path forward.
 
 ### Minor
 
-- All todos currently stored in default array in newTodo
 - Store state in localstorage as well for reuse
 - Change font
 - Adjust spacing and arrangement of forms
@@ -30,12 +28,21 @@
 - Project names with a space cannot be used with querySelector without modification. Will need to address for core functionality (COMPLETED)
   - convert to kebab case for attributes? (COMPLETED)
 - Change project names to lowercase for use as attributes? (COMPLETED)
+- All todos currently stored in default array in newTodo (COMPLETED, NOW STORED IN STATE FILE)
+- Add new projects to state on creation (COMPLETED)
+- Having an area to manage state will be useful for organizing data. (COMPLETED)
+  - Have a fake DB file?
+
 
 ## Design Choices
 
 - I am at a bit of an impasse on how to handle state. My gut says that the correct way to handle state is to store it separately and use it as the basis for rendering the page. The downside to this is that it seems like this is the very reason that frameworks were created and reinventing the wheel is a bit counterproductive. This lesson seems to geared at direct manipulation of the DOM and using the DOM as the state holder.
-- The downside to having a large single state file is the constant rerendering of the whole page which. I realize that for a project of this scale it will be meaningless but it doesn't seem like best practice.
+- The downside to having a large single state file is the constant rerendering of the whole page. I realize that for a project of this scale it will be meaningless but it doesn't seem like best practice.
 - I am torn as to how much time to commit to this project. Given that I would like to implement localStorage, having some consolidated state object will be needed so I may implement a hybrid approach.
+
+---
+
+- I have implemented state as a separate file acting as a dummy DB in a way. Ultimately, it has been a good learning experience and will allow for a unified localstorage but that's about it. I have no doubt that there are packages available to simply this process but doing it by hand has been informative. 
 
 ## Planning
 
