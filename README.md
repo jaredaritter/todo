@@ -6,15 +6,22 @@
 
 ### Major
 
-- Something broken in addTodoToState preventing adding todo to 'Project 2' likely has to do with parsing and the space in the name.
+- Make it prettier:
+  - Align forms and make more user friendly
+  - Allow minimizing projects
+  - Show title and date on todos
+    - Clickable for full details (this is probably where editting and deleting should go)
+  - Adjust font
+- Allow editting of todos
+- Allow deleting of todos
+- Allow editting of projects
+- Allow deleting of projects
 - Time for another planning session needed for path forward.
 
 ### Minor
 
+- Probably should store date in clean, input format style and adjust for what comes in and out of html value attributes as needed.
 - Store state in localstorage as well for reuse
-- Change font
-- Adjust spacing and arrangement of forms
-- Adjust alignment of new project form
 
 ### Completed
 
