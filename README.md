@@ -40,6 +40,7 @@
 - Add new projects to state on creation (COMPLETED)
 - Having an area to manage state will be useful for organizing data. (COMPLETED)
   - Have a fake DB file?
+- Fix issue with todo insertion failing if project name has spaces (COMPLETED)
 
 ## Design Choices
 
