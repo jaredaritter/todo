@@ -20,7 +20,7 @@
 
 ### Minor
 
-- Probably should store date in clean, input format style and adjust for what comes in and out of html value attributes as needed.
+- Probably should store data in clean, input format style and adjust for what comes in and out of html value attributes as needed.
 - Store state in localstorage as well for reuse
 
 ### Completed
