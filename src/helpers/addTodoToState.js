@@ -1,18 +1,20 @@
 import { projects } from '../data/projects';
 import { capitalizeFirstLetter } from './capitalizeFirstLetter';
+import { toSpaces } from './toSpaces';
 
 function addTodoToState(todo) {
   // FIND INDEX OF PROJECT THAT TODO WILL BE INSERTED INTO
-  const objIndex = projects.findIndex(
-    (project) => project.name === capitalizeFirstLetter(todo.project)
-  );
-  console.log(objIndex); // SHOWS CORRECTLY  (CURRENTLY NOT IMPLEMENTED IN NEW PROJECT)
+  const objIndex = projects.findIndex((project) => {
+    return project.name == capitalizeFirstLetter(toSpaces(todo.project));
+  });
+  console.log(objIndex); // SHOWS CORRECTLY
 
   const newTodos = [...projects[objIndex].todos, todo];
   projects[objIndex].todos = newTodos;
+  console.log('*********************');
 }
 
-export {addTodoToState}
+export { addTodoToState };
 
 // OPTIONS FOR INSERTING INTO OBJECTS IN ARRAYS
 // MAP

@@ -6,6 +6,7 @@
 
 ### Major
 
+- Something broken in addTodoToState preventing adding todo to 'Project 2' likely has to do with parsing and the space in the name.
 - Time for another planning session needed for path forward.
 
 ### Minor
@@ -33,7 +34,6 @@
 - Having an area to manage state will be useful for organizing data. (COMPLETED)
   - Have a fake DB file?
 
-
 ## Design Choices
 
 - I am at a bit of an impasse on how to handle state. My gut says that the correct way to handle state is to store it separately and use it as the basis for rendering the page. The downside to this is that it seems like this is the very reason that frameworks were created and reinventing the wheel is a bit counterproductive. This lesson seems to geared at direct manipulation of the DOM and using the DOM as the state holder.
@@ -42,7 +42,7 @@
 
 ---
 
-- I have implemented state as a separate file acting as a dummy DB in a way. Ultimately, it has been a good learning experience and will allow for a unified localstorage but that's about it. I have no doubt that there are packages available to simply this process but doing it by hand has been informative. 
+- I have implemented state as a separate file acting as a dummy DB in a way. Ultimately, it has been a good learning experience and will allow for a unified localstorage but that's about it. I have no doubt that there are packages available to simply this process but doing it by hand has been informative.
 
 ## Planning
 
