@@ -65,6 +65,7 @@ th {
 
 .forms {
   display: flex;
+  justify-content: space-evenly;
 }
 
 .header {
@@ -84,10 +85,8 @@ th {
 
 #project-form {
   width: 30%;
-  margin: auto;
 }
 
 #todo-form {
   width: 30%;
-  margin: auto;
 }
