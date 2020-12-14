@@ -1,5 +1,5 @@
 function buildTableHeaders() {
-  const cellNames = ['Title', 'Description', 'Due', 'Priority'];
+  const cellNames = ['Title', 'Due'];
   const thead = document.createElement('thead');
   const tr = document.createElement('tr');
   cellNames.forEach((name) => {

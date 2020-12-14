@@ -1,12 +1,16 @@
 function renderTodo(obj) {
   const tbody = document.querySelector(`#${obj.project} tbody`);
+
   const tr = document.createElement('tr');
-  for (const item in obj) {
-    if (item === 'project') continue;
-    const td = document.createElement('td');
-    td.textContent = obj[item];
-    tr.appendChild(td);
-  }
+  const title = document.createElement('td');
+  const dueDate = document.createElement('td');
+
+  title.textContent = obj.title;
+  dueDate.textContent = obj.dueDate;
+
+  tr.appendChild(title);
+  tr.appendChild(dueDate);
+
   tbody.appendChild(tr);
 }
 

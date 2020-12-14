@@ -5,12 +5,14 @@ import { toKebabCase } from '../helpers/toKebabCase';
 
 function renderProject(projectName) {
   const projects = document.querySelector('.projects');
+
   const project = document.createElement('div');
+  const table = document.createElement('table');
+  const tbody = document.createElement('tbody');
+
   project.classList.add('project');
   project.setAttribute('id', `${toKebabCase(projectName.toLowerCase())}`);
-  const table = document.createElement('table');
   table.classList.add('list');
-  const tbody = document.createElement('tbody');
 
   table.appendChild(buildTableHeaders());
   table.appendChild(tbody);
