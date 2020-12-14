@@ -41,6 +41,7 @@
 - Having an area to manage state will be useful for organizing data. (COMPLETED)
   - Have a fake DB file?
 - Fix issue with todo insertion failing if project name has spaces (COMPLETED)
+- Stop from displaying project choice (COMPLETED)
 
 ## Design Choices
 
