@@ -5,6 +5,7 @@ import { newProject } from './events/newProject';
 import { projects } from './data/projects';
 import { renderProject } from './renders/renderProject';
 import { renderProjectOption } from './renders/renderProjectOption';
+import { renderTodo } from './renders/renderTodo';
 
 const starter = projects[0].name;
 
@@ -15,6 +16,11 @@ document.querySelector('.new-project').addEventListener('click', newProject);
 // INITIALIZE PAGE
 renderProjectOption(starter);
 renderProject(starter);
+
+// RENDER DUMMY DATA
+projects[0].todos.forEach((todo) => {
+  renderTodo(todo);
+});
 
 // -----------------------------------------------------------------------------
 // BRAINSTORMING AND PLANNING
