@@ -7,11 +7,11 @@
 ### Major
 
 - Make it prettier:
-  - Align forms and make more user friendly
-  - Allow minimizing projects
-  - Show title and date on todos
-    - Clickable for full details (this is probably where editting and deleting should go)
-  - Adjust font
+  - Clickable for full details (this is probably where editting and deleting should go)
+  - Add dropdowns for projects using dynamic-ui project code
+  - Adjust font (COMPLETED)
+  - Align forms and make more user friendly (COMPLETE)
+  - Show title and date on todos (COMPLETED)
 - Allow editting of todos
 - Allow deleting of todos
 - Allow editting of projects
