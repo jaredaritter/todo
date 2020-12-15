@@ -1,6 +1,6 @@
 # To Do project from TOP
 
-- Basic ToDo project. Currently WIP.
+- ToDo project using the basics. HTML, CSS, Vanilla JS. WIP.
 
 ## Roadmap/Todo
 
