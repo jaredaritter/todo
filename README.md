@@ -6,7 +6,7 @@
 
 ### Major
 
-- Choose how to view full todo. Modal or dropdown seem to be the choices.
+- Show extra information using a modal.
 - Make it prettier:
   - Clickable for full details (this is probably where editting and deleting should go)
   - Add dropdowns for projects using dynamic-ui project code
